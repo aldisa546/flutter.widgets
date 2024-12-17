@@ -198,6 +198,8 @@ class ItemScrollController {
   /// If `false`, then [jumpTo] and [scrollTo] must not be called.
   bool get isAttached => _scrollableListState != null;
 
+  ScrollController get scrollController => _scrollableListState!.primary.scrollController;
+
   _ScrollablePositionedListState? _scrollableListState;
 
   /// Immediately, without animation, reconfigure the list so that the item at
